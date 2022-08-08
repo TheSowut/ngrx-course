@@ -22,7 +22,7 @@ import { reducers } from './reducers';
 import { AuthGuard } from './auth/auth.guard';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
-// import { metaReducers } from '../app/reducers/index';
+import { metaReducers } from '../app/reducers/index';
 
 const routes: Routes = [
   {
@@ -55,7 +55,7 @@ const routes: Routes = [
     MatToolbarModule,
     AuthModule.forRoot(),
     StoreModule.forRoot(reducers, {
-      // metaReducers
+      metaReducers,
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true,
